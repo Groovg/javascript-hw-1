@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lol</title>
+  </head>
+  <body>
+    <script>
+      let firstName = prompt("Введіть ваше ім'я (наприклад, John):");
+
+      let lastName = prompt("Введіть ваше прізвище (наприклад, Doe):");
+
+      let dayOfBirthString = prompt(
+        "Введіть день вашого народження (наприклад, 12):"
+      );
+      let monthOfBirthString = prompt(
+        "Введіть місяць вашого народження у числовому форматі (наприклад, 11):"
+      );
+      let yearOfBirthString = prompt(
+        "Введіть рік вашого народження (наприклад, 1988):"
+      );
+
+      let dayOfBirth = +dayOfBirthString;
+      let monthOfBirth = +monthOfBirthString;
+      let yearOfBirth = +yearOfBirthString;
+
+      let isLeapYear = false;
+
+      if (
+        yearOfBirth % 400 === 0 ||
+        (yearOfBirth % 100 !== 0 && yearOfBirth % 4 === 0)
+      ) {
+        isLeapYear = true;
+      }
+
+      let userZodiac = "";
+
+      if (
+        (monthOfBirth === 1 && dayOfBirth >= 20) ||
+        (monthOfBirth === 2 && dayOfBirth <= 18)
+      ) {
+        userZodiac = "Aquarius♒";
+      } else if (
+        (monthOfBirth === 2 && dayOfBirth >= 19) ||
+        (monthOfBirth === 3 && dayOfBirth <= 20)
+      ) {
+        userZodiac = "Pisces♓";
+      } else if (
+        (monthOfBirth === 3 && dayOfBirth >= 21) ||
+        (monthOfBirth === 4 && dayOfBirth <= 19)
+      ) {
+        userZodiac = "Aries♈";
+      } else if (
+        (monthOfBirth === 4 && dayOfBirth >= 20) ||
+        (monthOfBirth === 5 && dayOfBirth <= 20)
+      ) {
+        userZodiac = "Taurus♉";
+      } else if (
+        (monthOfBirth === 5 && dayOfBirth >= 21) ||
+        (monthOfBirth === 6 && dayOfBirth <= 20)
+      ) {
+        userZodiac = "Gemini♊";
+      } else if (
+        (monthOfBirth === 6 && dayOfBirth >= 21) ||
+        (monthOfBirth === 7 && dayOfBirth <= 22)
+      ) {
+        userZodiac = "Cancer♋";
+      } else if (
+        (monthOfBirth === 7 && dayOfBirth >= 23) ||
+        (monthOfBirth === 8 && dayOfBirth <= 22)
+      ) {
+        userZodiac = "Leo♌";
+      } else if (
+        (monthOfBirth === 8 && dayOfBirth >= 23) ||
+        (monthOfBirth === 9 && dayOfBirth <= 22)
+      ) {
+        userZodiac = "Virgo♍";
+      } else if (
+        (monthOfBirth === 9 && dayOfBirth >= 23) ||
+        (monthOfBirth === 10 && dayOfBirth <= 22)
+      ) {
+        userZodiac = "Libra♎";
+      } else if (
+        (monthOfBirth === 10 && dayOfBirth >= 23) ||
+        (monthOfBirth === 11 && dayOfBirth <= 21)
+      ) {
+        userZodiac = "Scorpio♏";
+      } else if (
+        (monthOfBirth === 11 && dayOfBirth >= 22) ||
+        (monthOfBirth === 12 && dayOfBirth <= 21)
+      ) {
+        userZodiac = "Sagittarius♐";
+      } else {
+        userZodiac = "Capricorn♑";
+      }
+
+      let userAge = 2022 - yearOfBirth;
+      let userBio = "";
+
+      if (isLeapYear) {
+        userBio = `${firstName} ${lastName}, ${userAge} роки (Leap year), ${userZodiac};`;
+      } else {
+        userBio = `${firstName} ${lastName}, ${userAge} роки, ${userZodiac};`;
+      }
+
+      document.write("User Bio: " + userBio);
+    </script>
+  </body>
+</html>
