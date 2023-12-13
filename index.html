@@ -36,63 +36,69 @@
 
       let userZodiac = "";
 
-      if (
-        (monthOfBirth === 1 && dayOfBirth >= 20) ||
-        (monthOfBirth === 2 && dayOfBirth <= 18)
-      ) {
-        userZodiac = "Aquarius♒";
-      } else if (
-        (monthOfBirth === 2 && dayOfBirth >= 19) ||
-        (monthOfBirth === 3 && dayOfBirth <= 20)
-      ) {
-        userZodiac = "Pisces♓";
-      } else if (
-        (monthOfBirth === 3 && dayOfBirth >= 21) ||
-        (monthOfBirth === 4 && dayOfBirth <= 19)
-      ) {
-        userZodiac = "Aries♈";
-      } else if (
-        (monthOfBirth === 4 && dayOfBirth >= 20) ||
-        (monthOfBirth === 5 && dayOfBirth <= 20)
-      ) {
-        userZodiac = "Taurus♉";
-      } else if (
-        (monthOfBirth === 5 && dayOfBirth >= 21) ||
-        (monthOfBirth === 6 && dayOfBirth <= 20)
-      ) {
-        userZodiac = "Gemini♊";
-      } else if (
-        (monthOfBirth === 6 && dayOfBirth >= 21) ||
-        (monthOfBirth === 7 && dayOfBirth <= 22)
-      ) {
-        userZodiac = "Cancer♋";
-      } else if (
-        (monthOfBirth === 7 && dayOfBirth >= 23) ||
-        (monthOfBirth === 8 && dayOfBirth <= 22)
-      ) {
-        userZodiac = "Leo♌";
-      } else if (
-        (monthOfBirth === 8 && dayOfBirth >= 23) ||
-        (monthOfBirth === 9 && dayOfBirth <= 22)
-      ) {
-        userZodiac = "Virgo♍";
-      } else if (
-        (monthOfBirth === 9 && dayOfBirth >= 23) ||
-        (monthOfBirth === 10 && dayOfBirth <= 22)
-      ) {
-        userZodiac = "Libra♎";
-      } else if (
-        (monthOfBirth === 10 && dayOfBirth >= 23) ||
-        (monthOfBirth === 11 && dayOfBirth <= 21)
-      ) {
-        userZodiac = "Scorpio♏";
-      } else if (
-        (monthOfBirth === 11 && dayOfBirth >= 22) ||
-        (monthOfBirth === 12 && dayOfBirth <= 21)
-      ) {
-        userZodiac = "Sagittarius♐";
+      if (monthOfBirth >= 1 && monthOfBirth <= 12) {
+        if (
+          (monthOfBirth === 1 && dayOfBirth >= 20) ||
+          (monthOfBirth === 2 && dayOfBirth <= 18)
+        ) {
+          userZodiac = "Aquarius";
+        } else if (
+          (monthOfBirth === 2 && dayOfBirth >= 19) ||
+          (monthOfBirth === 3 && dayOfBirth <= 20)
+        ) {
+          userZodiac = "Pisces";
+        } else if (
+          (monthOfBirth === 3 && dayOfBirth >= 21) ||
+          (monthOfBirth === 4 && dayOfBirth <= 19)
+        ) {
+          userZodiac = "Aries";
+        } else if (
+          (monthOfBirth === 4 && dayOfBirth >= 20) ||
+          (monthOfBirth === 5 && dayOfBirth <= 20)
+        ) {
+          userZodiac = "Taurus";
+        } else if (
+          (monthOfBirth === 5 && dayOfBirth >= 21) ||
+          (monthOfBirth === 6 && dayOfBirth <= 20)
+        ) {
+          userZodiac = "Gemini";
+        } else if (
+          (monthOfBirth === 6 && dayOfBirth >= 21) ||
+          (monthOfBirth === 7 && dayOfBirth <= 22)
+        ) {
+          userZodiac = "Cancer";
+        } else if (
+          (monthOfBirth === 7 && dayOfBirth >= 23) ||
+          (monthOfBirth === 8 && dayOfBirth <= 22)
+        ) {
+          userZodiac = "Leo";
+        } else if (
+          (monthOfBirth === 8 && dayOfBirth >= 23) ||
+          (monthOfBirth === 9 && dayOfBirth <= 22)
+        ) {
+          userZodiac = "Virgo";
+        } else if (
+          (monthOfBirth === 9 && dayOfBirth >= 23) ||
+          (monthOfBirth === 10 && dayOfBirth <= 22)
+        ) {
+          userZodiac = "Libra";
+        } else if (
+          (monthOfBirth === 10 && dayOfBirth >= 23) ||
+          (monthOfBirth === 11 && dayOfBirth <= 21)
+        ) {
+          userZodiac = "Scorpio";
+        } else if (
+          (monthOfBirth === 11 && dayOfBirth >= 22) ||
+          (monthOfBirth === 12 && dayOfBirth <= 21)
+        ) {
+          userZodiac = "Sagittarius";
+        } else {
+          userZodiac = "Capricorn";
+        }
       } else {
-        userZodiac = "Capricorn♑";
+        document.write(
+          "Некоректно введений місяць народження. Будь ласка, введіть числове значення від 1 до 12."
+        );
       }
 
       let userAge = 2022 - yearOfBirth;
